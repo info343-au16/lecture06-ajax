@@ -32,9 +32,10 @@
       <!-- data will be added here -->
     </div>
 
-    <form role="form">
+    <form role="form" method="GET" action="https://api.spotify.com/v1/search">
       <label for="searchQuery"> What do you want to hear?</label>
-      <input type="text" name="q" id="searchQuery">
+      <input type="text" name="q" id="searchQuery" value="bowie">
+      <input type="hidden" name="type" value="track">
 
       <button type="submit" class="btn">
         <i class="fa fa-music" aria-hidden="true"></i> Search!
@@ -44,6 +45,7 @@
   </main>
 
   <!-- load script files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script>  
   <script src="js/app.js"></script>
 </body>
 </html>
